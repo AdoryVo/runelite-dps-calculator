@@ -5,15 +5,6 @@ package com.dpscalculator;
 // todo: magic stuff :(
 public class Player
 {
-    public static void main(String[] args)
-    {
-        Player p = new Player(99, 99, 99, 99, 99, 99, 99, 99,
-                0, 0, 0, 0, 85, 0, 62, 0,
-                new int[]{0, 0, 4, 0, 0, 0});
-        System.out.println(p.attackRoll(4, 1.2, 2, 13, -1));
-        System.out.println(p.maxHit(4, 1.23, 2, 13, -1));
-    }
-
     private final int atk, str, mage, range, HP, currHP, pray, currPray;
     private final int stabBonus, slashBonus, crushBonus, magicBonus, rangeBonus, melStr, rangeStr;
     private final double mageStr;
@@ -55,11 +46,11 @@ public class Player
     /**
      * Returns max attack roll (player)
      *
-     * @param style stab, slash, crush, magic, range -> Domain: [0, 4]
+     * @param style  stab, slash, crush, magic, range -> Domain: [0, 4]
      * @param prayer prayer boost
      * @param stance accurate, controlled, aggressive/rapid, defencive-> Domain: [0, 3]
      * @param potion level boost from potion
-     * @param type undead, demon, dragon, vorkath -> Domain: [0, 3]
+     * @param type   undead, demon, dragon, vorkath -> Domain: [0, 3]
      * @return max attack roll
      */
     public int attackRoll(int style, double prayer, int stance, int potion, int type)
@@ -155,5 +146,18 @@ public class Player
         }
 
         return baseRoll;
+    }
+
+    /**
+     *
+     * @param args Command line arguments.
+     */
+    public static void main(String[] args)
+    {
+        Player p = new Player(99, 99, 99, 99, 99, 99, 99, 99,
+                0, 0, 0, 0, 85, 0, 62, 0,
+                new int[]{0, 0, 4, 0, 0, 0});
+        System.out.println(p.attackRoll(4, 1.2, 2, 13, -1));
+        System.out.println(p.maxHit(4, 1.23, 2, 13, -1));
     }
 }
