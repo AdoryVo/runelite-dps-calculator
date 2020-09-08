@@ -13,6 +13,8 @@ repositories {
 def runeLiteVersion = '1.6.26.1'
 
 dependencies {
+	implementation 'com.univocity:univocity-parsers:2.9.0'
+
 	compileOnly group: 'net.runelite', name:'client', version: runeLiteVersion
 
 	compileOnly 'org.projectlombok:lombok:1.18.4'
@@ -25,7 +27,7 @@ dependencies {
 	}
 }
 
-group = 'com.example'
+group = 'com.dpsCalculator'
 version = '1.0-SNAPSHOT'
 sourceCompatibility = '1.8'
 
