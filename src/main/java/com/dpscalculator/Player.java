@@ -1,14 +1,14 @@
 package com.dpscalculator;
 
 public class Player {
-    public static void main(String[] args)
-    {
-        Player p = new Player(99, 99, 99 ,99 ,99 ,99 ,99,99,
-                0,0,0,0,85,0,62,0,
-                new int[] {0, 0, 4, 0, 0, 0});
-        System.out.println(p.attackRoll(4, 1.2, 2, 13, -1));
-        System.out.println(p.maxHit(4, 1.23, 2, 13, -1));
-    }
+//    public static void main(String[] args)
+//    {
+//        Player p = new Player(99, 99, 99 ,99 ,99 ,99 ,99,99,
+//                0,0,0,0,85,0,62,0,
+//                new int[] {0, 0, 4, 0, 0, 0});
+//        System.out.println(p.attackRoll(4, 1.2, 2, 13, -1));
+//        System.out.println(p.maxHit(4, 1.23, 2, 13, -1));
+//    }
     private final int atk, str, mage, range, HP, currHP, pray, currPray;
     private final int stabBonus, slashBonus, crushBonus, magicBonus, rangeBonus, melStr, rangeStr;
     private final double mageStr;
